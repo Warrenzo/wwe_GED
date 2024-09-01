@@ -15,6 +15,7 @@
 <body>
     <div id="app">
         @include('components.sidebar')
+
         <main class="py-4">
             @yield('content')
         </main>

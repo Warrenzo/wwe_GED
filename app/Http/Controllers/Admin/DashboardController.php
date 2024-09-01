@@ -16,7 +16,7 @@ class DashboardController extends Controller
         $totalDocuments = Document::count();
         $totalUsers = User::count();
         $totalClassifications = Classification::count();
-    
+
         // Calcul du nombre de sous-répertoires créés
         $dailySubdirectories = Classification::whereDate('created_at', Carbon::today())->count();
         $weeklySubdirectories = Classification::whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
